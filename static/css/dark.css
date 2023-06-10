@@ -56,10 +56,6 @@ a:hover {
 	border-color: #333;
 }
 
-.highlight {
-	background-color: #333;
-}
-
 table th {
 	background-color: #333;
 }
@@ -70,12 +66,15 @@ table th, table td {
 }
 
 pre code {
-  display: inline-block
+  display: block;
+  background: #0d1117;
 }
-code { background: #aaa;
-   white-space: pre-wrap;       /* css-3 */
-    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-     white-space: -pre-wrap;      /* Opera 4-6 */
-      white-space: -o-pre-wrap;    /* Opera 7 */
-       word-wrap: break-word;  
-   }
+
+code {
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;
+  background: #228;
+}
