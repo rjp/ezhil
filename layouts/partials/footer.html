@@ -10,3 +10,20 @@
 {{- with .Site.Params.Social -}}
 <script>feather.replace()</script>
 {{- end -}}
+
+ <script src="/js/fuse.js"></script> <!-- download and copy over fuse.js file from fusejs.io -->
+ <script src="/js/fastsearch.js"></script>
+
+<!--
+{{ if and (not .Params.disable_highlight) (in (string .Content) "</pre>") }}
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/r.min.js"></script>
+<script>
+hljs.configure({languages: []});
+hljs.initHighlightingOnLoad();
+console.log("applied highlightjs");
+</script>
+{{ end }}
+-->

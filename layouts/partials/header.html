@@ -1,6 +1,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://rjp.is/webmention" rel="webmention"/>
 	{{- $title := ( .Title ) -}}
 	{{- $siteTitle := ( .Site.Title ) -}}
 	{{- if .IsHome -}}
@@ -22,8 +23,10 @@
 	{{- template "_internal/twitter_cards.html" . -}}
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
 
+	<link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}css/arduino-syntax.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}css/main.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}css/main.css?x=1240" />
+
 	{{- if isset .Site.Params "customcss" }}
 	<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}{{ .Site.Params.customCSS }}" />
 	{{ end }}
@@ -49,4 +52,17 @@
 	{{- end }}
 	{{- end }}
 	{{- end }}
+<!-- Load MathJax, if necessary. -->
+{{ if or .Params.math .IsHome }}
+  {{ partial "math.html" . }}
+{{ end }}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style type="text/css" media="screen">
+@media (prefers-color-scheme: dark) {
+  {{ partial "css/code-github-dark.css" . | safeCSS }}
+}
+@media (prefers-color-scheme: light) {
+  {{ partial "css/code-github.css" . | safeCSS }}
+}
+</style>
 </head>

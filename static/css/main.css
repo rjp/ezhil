@@ -63,11 +63,16 @@ textarea {
 blockquote {
     margin-left: 1rem;
     font-style: italic;
-    font-size: 1.4rem;
+    font-size: 1.1em;
     font-family: Georgia,bitstream charter,serif;
     border-left: 3px solid;
     border-color: #a00;
     padding-left: 20px;
+    padding-right: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    background-color: #eeeeee;
+
 }
 
 blockquote cite {
@@ -413,4 +418,22 @@ table th, table td {
     .container {
         margin-top: 10px;
     }
+}
+
+/* code */
+pre {
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 5px #eee;
+  overflow-x: auto;
+}
+code { background: #d9d9d9;
+   white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+     white-space: -pre-wrap;      /* Opera 4-6 */
+      white-space: -o-pre-wrap;    /* Opera 7 */
+       word-wrap: break-word;  
+   }
+pre code {
+  padding: .5em;
+  display: block;
 }
